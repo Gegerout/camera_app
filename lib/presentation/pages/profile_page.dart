@@ -71,7 +71,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                     name = result[1];
                                     surname = result[2];
                                     if(file!.path.endsWith("mp4")) {
-                                      controller = VideoPlayerController.file(File("state.user!.image != null ? state.user!.image! : """));
+                                      controller = VideoPlayerController.file(File(file != null ? file!.path : ""));
                                       controller!.setLooping(true);
                                       controller!.initialize().then((_) {
                                         setState(() {});
@@ -105,7 +105,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                   name = result[1];
                                   surname = result[2];
                                   if(file!.path.endsWith("mp4")) {
-                                    controller = VideoPlayerController.file(File("state.user!.image != null ? state.user!.image! : """));
+                                    controller = VideoPlayerController.file(File(file != null ? file!.path : ""));
                                     controller!.setLooping(true);
                                     controller!.initialize().then((_) {
                                       setState(() {});
@@ -118,7 +118,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                   width: 100,
                                   height: 100,
                                   child: Image.file(
-                                    File("state.user!.image != null ? state.user!.image! : """),
+                                    File(file!.path),
                                     fit: BoxFit.fill,
                                   ))),
                         );
@@ -136,7 +136,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               file = result[0];
                               name = result[1];
                               surname = result[2];
-                              controller = VideoPlayerController.file(File("state.user!.image != null ? state.user!.image! : """));
+                              controller = VideoPlayerController.file(File(file != null ? file!.path : ""));
                               controller!.setLooping(true);
                               controller!.initialize().then((_) {
                                 setState(() {});
