@@ -1,5 +1,6 @@
 import 'package:camera_app/presentation/pages/map_page.dart';
 import 'package:camera_app/presentation/pages/profile_page.dart';
+import 'package:camera_app/presentation/pages/sensors_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -22,6 +23,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     List<Widget> widgetOptions = <Widget>[
       const MapPage(),
+      const SensorsPage(),
       const ProfilePage()
     ];
     return Scaffold(
@@ -33,6 +35,10 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.location_on),
             label: 'Map',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.sensors),
+            label: 'Sensors',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
