@@ -41,6 +41,9 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     context.read<UserDataBloc>().add(GetUserData());
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Profile page"),
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(top: 20, left: 20, right: 20),

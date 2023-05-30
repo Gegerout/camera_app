@@ -15,6 +15,9 @@ class _SensorsPageState extends State<SensorsPage> {
     double dx = MediaQuery.of(context).size.width / 2 - 25, dy = MediaQuery.of(context).size.height / 2 - 25;
 
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Sensors page"),
+      ),
       body: StreamBuilder<GyroscopeEvent>(
         stream: SensorsPlatform.instance.gyroscopeEvents,
         builder: (_, snapshot) {
